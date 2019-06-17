@@ -17,8 +17,11 @@ app.get(["/", "/home"], (req, res) => { // clbk parameters are mandatory
   });
 });
 
-app.get("/prod-manage", (req, res) => { // clbk parameters are mandatory
+app.get("/prod-add", (req, res) => { // clbk parameters are mandatory
   // res.send("<h1>hello world</h1>");
+  res.render("products_add");
+});
+app.get("/prod-manage", (req, res) => { // clbk parameters are mandatory
   res.render("products_manage");
 });
 
