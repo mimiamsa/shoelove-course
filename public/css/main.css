@@ -1,10 +1,10 @@
 @import './reset.css';
 @import './header-nav.css';
-@import './form.css';
-@import './products.css';
-@import './button.css';
 @import './footer.css';
-
+@import './form.css';
+@import './button.css';
+@import './products.css';
+@import './products-forms.css';
 
 @import url('https://fonts.googleapis.com/css?family=Faster+One|Oswald:300,400,500,700|Source+Sans+Pro:300,400,600,700&display=swap');
 
@@ -26,8 +26,6 @@ h4 {
 
 .big-container {
   display: flex;
-  /* flex-direction: column;
-  align-items: center; */
   width: 100%;
 }
 

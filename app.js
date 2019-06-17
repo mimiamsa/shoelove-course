@@ -1,17 +1,13 @@
 const express = require("express");
-const app = express();
-const path = require("path");
 const hbs = require("hbs");
-// const ejs = require('ejs');
+const app = express();
 
 app.set("view engine", "hbs"); //
 app.set("views", __dirname + "/views"); //
 app.use(express.static("public"));
 hbs.registerPartials(__dirname + "/views/partials");
 
-
 app.get(["/", "/home"], (req, res) => { // clbk parameters are mandatory
-  // response.send("<h1>hello world</h1>");
   res.render("index", {
     people : [
       {name: "gogo"},
@@ -21,8 +17,11 @@ app.get(["/", "/home"], (req, res) => { // clbk parameters are mandatory
   });
 });
 
-
+app.get("/prod-manage", (req, res) => { // clbk parameters are mandatory
+  // res.send("<h1>hello world</h1>");
+  res.render("products_manage");
+});
 
 const listener = app.listen("8000", () => {
-  console.log("app/ejs started @ http://localhost:" + listener.address().port);
+  console.log("app/hbs started @ http://localhost:" + listener.address().port);
 })

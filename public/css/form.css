@@ -1,0 +1,37 @@
+input:focus {
+  outline: none;
+}
+
+.input {
+  padding: .5rem;
+  border: none;
+  border: 1px solid black;
+  border-radius: .2rem;
+  font-size: .9rem;
+}
+
+/*----select option----*/
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* remove default arrow */
+  background-image: url("../medias/img/arrow_down.svg");
+  background-repeat: no-repeat;
+  background-position:
+    calc(100% - 21px) calc(1em + 2px),
+    calc(100% - 16px) calc(1em + 2px),
+    100% 0;
+  background-size:
+    9px 9px,
+    9px 9px,
+    2.5em 2.5em;
+  border-radius: .2rem;
+  border: 1px solid rgb(235, 235, 235);
+  /* add custom arrow */
+}
+
+select:focus {
+  outline: none;
+}
+

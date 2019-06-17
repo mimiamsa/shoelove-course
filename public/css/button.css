@@ -14,6 +14,22 @@ outline: none;
 
 /*--ARROW BUTTON--*/
 
+.button-primary {
+  color: white;
+  background: black;
+  border:1px solid;
+  font-size: 1rem;
+  transition: all .2s ease-in;
+  border-radius: .2rem;
+  padding: .5rem .8rem;
+}
+
+.button-primary:hover {
+  color:black;
+  background: white;
+  border:1px solid;
+}
+
 .button-ternary {
   color: rgb(151, 151, 151);
   font-size: 1rem;

@@ -8,17 +8,17 @@
 }
 
 .nav-link-wrapper{
-width: 45%;
+width: 50%;
 }
 
 .nav-wrapper {
   border-bottom: 1px solid rgb(212, 212, 212);
+  height:53px;
   padding: 0 1.2rem;
 }
 
 .nav-logo {
   margin-right: 3.5rem;
-  padding: .2rem 0;
 }
 
 h2.logo-item {

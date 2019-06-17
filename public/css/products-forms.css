@@ -1,0 +1,41 @@
+.add-product-form{
+  width: 30%;
+  margin-right: 2rem;
+}
+.add-category-form{
+  width: 30%;
+}
+
+.product-manage-wrapper{
+  padding: 2rem 1.2rem;
+  height: calc(100vh - (84px));
+}
+
+.form-item-wrapper {
+  flex-direction: column;
+  margin-bottom: 1.3rem;
+  /* width: 50%; */
+}
+
+h3.form-title{
+  border-bottom: 1px solid rgb(212, 212, 212);
+  padding-bottom: .8rem;
+  margin-bottom: .8rem;
+  font-size:1.2rem; 
+}
+
+.select {
+  /* width: 50%; */
+  padding: .6rem;
+  font-size: 1rem;
+  font-family: 'Source Sans Pro'
+}
+
+.input {
+  /* width: 50%; */
+
+}
+
+.label {
+  margin-bottom: .6rem;
+}
