@@ -35,3 +35,24 @@ select:focus {
   outline: none;
 }
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgb(151, 151, 151);
+    font-size: .9rem;
+
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: rgb(151, 151, 151);
+    font-size: .9rem;
+
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: rgb(151, 151, 151);
+    font-size: .9rem;
+
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: rgb(151, 151, 151);
+    font-size: .9rem;
+
+}
+

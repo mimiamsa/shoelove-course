@@ -1,10 +1,7 @@
-.main-content-products {}
-
 aside.category-wrapper {
-  width: 27%;
+  width: 17%;
   padding: 2rem 1.5%;
 }
-
 
 
 h4.category-title {
@@ -14,15 +11,6 @@ h4.category-title {
   margin-bottom: .8rem;
 }
 
-/* h4.category-title::after {
-  content: "";
-  height: 1px;
-  background:rgb(151, 151, 151);
-} */
-
-
-.category-list {}
-
 .category-list-item {
   color: rgb(151, 151, 151);
   cursor: pointer;
@@ -30,7 +18,7 @@ h4.category-title {
 }
 
 .products-wrapper {
-  width: 67%;
+  width: 77%;
   padding: 2rem 1.5%;
 }
 
@@ -56,13 +44,8 @@ h4.products-title {
 
 .products-grid {
   flex-wrap: wrap;
-  /* border: 1px solid red; */
 }
 
-.product-item-wrapper {
-  /* border: 1px solid violet; */
-
-}
 
 .product-item-wrapper {
   cursor: pointer;
