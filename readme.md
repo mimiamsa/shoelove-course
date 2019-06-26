@@ -6,7 +6,7 @@ Your mission is to create a fullstack client-server CRUD application !!!
 
 Our client demands an online shop specialized in sneakers.
 
-Thanksfully, our lead designer has allready done a big part of the job.
+Thankfully, our lead designer has already done a big part of the job.
 So you won't have to deal that much with CSS (; Ahhh this is perfect ; )
 
 ---
@@ -59,4 +59,10 @@ Each team will have 5 minutes to showcase their work, friday at 4PM.
 # 2 add some custom categories @ /prod-add
 
 # 2 code the filters in AJAX with axios
+
+---
+
+## Hardcore bonus
+
+# 0 Add a shopcart feature :D
 
