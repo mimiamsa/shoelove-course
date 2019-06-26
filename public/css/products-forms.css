@@ -8,7 +8,6 @@
 
 .product-manage-wrapper{
   padding: 2rem 1.2rem;
-  height: calc(100vh - (84px));
 }
 
 .form-item-wrapper {
@@ -24,16 +23,11 @@ h3.form-title{
 }
 
 .select {
-  /* width: 50%; */
   padding: .6rem;
   font-size: 1rem;
   font-family: 'Source Sans Pro'
 }
 
-.input {
-  /* width: 50%; */
-
-}
 
 .label {
   margin-bottom: .5rem;

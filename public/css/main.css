@@ -6,6 +6,10 @@
 @import './products.css';
 @import './products-forms.css';
 @import './products-manage.css';
+@import './login-signup.css';
+@import './one-product.css';
+@import './home.css';
+
 
 @import url('https://fonts.googleapis.com/css?family=Faster+One|Oswald:300,400,500,700|Source+Sans+Pro:300,400,600,700&display=swap');
 
@@ -15,9 +19,14 @@
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-h1,
+h1{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 h2,
 h3,
 h4 {

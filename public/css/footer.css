@@ -1,4 +1,6 @@
 .footer {
+  bottom: 0;
+  position: fixed;
   padding: .5rem;
   height: 31px;
   width: 100%;
@@ -8,4 +10,5 @@
 
 footer p {
   font-size: .8rem;
+
 }
