@@ -2,16 +2,18 @@
   "name": "shop-express",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "ejs": "^2.6.1",
     "express": "^4.17.1",
-    "hbs": "^4.0.4"
+    "hbs": "^4.0.4",
+    "mongoose": "^5.6.1"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./app.js -e js,hbs"
+    "dev": "nodemon ./server.js -e js,hbs"
   },
   "keywords": [],
   "author": "",
