@@ -2,11 +2,11 @@ const express = require("express");
 const router = new express.Router();
 
 router.get(["/", "/home"], (req, res) => {
-  res.render("products");
+  res.render("index");
 });
 
-router.get("/prod-add", (req, res) => {
-  res.render("products_add");
+router.get(["/collection", "/kids", "/women", "/men"], (req, res) => {
+  res.render("products");
 });
 
 router.get("/signup", (req, res) => {
