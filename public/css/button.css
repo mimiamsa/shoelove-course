@@ -20,6 +20,7 @@ outline: none;
   border:1px solid;
   font-size: 1rem;
   transition: all .2s ease-in;
+  transition-property:color, background;
   border-radius: .2rem;
   padding: .5rem .8rem;
 }
@@ -34,6 +35,7 @@ outline: none;
   color: rgb(151, 151, 151);
   font-size: 1rem;
   transition: all .2s ease-in;
+  transition-property:color;
 }
 
 .button-ternary:hover {
