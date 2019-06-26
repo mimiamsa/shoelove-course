@@ -41,7 +41,7 @@ men : display only women products
 ## DB SCHEMAS
 
 User {name, lastname, email, password}
-Sneaker {name, ref, size, description, price, category: [men, women, kids], id_tags: [ObjectId] }
+Sneaker {name, ref, sizes, description, price, category: [men, women, kids], id_tags: [ObjectId] }
 Tags {label}
 
 ---

@@ -1,15 +1,26 @@
-<div class="form-header">
-  <h1 class="form-title">Start discovering a new way of running</h1>
-  <p class="form-subtitle">Enjoy yourself and be comfortable </p>
-</div>
-<div>
-  <form action="POST" id="form_signup">
-    <input type="text" name="name" id="name">
-    <input type="text" name="last-name" id="last_name">
-    <input type="email" name="email" id="email">
-    <input type="password" name="password" id="password">
-    <input type="password" name="password-confirmation" id="password_confirmation">
+<div class="sign form-container">
+  <div class="form-header">
+    <h1 class="form-title">Start your SneakLove journey</h1>
+    <p class="form-subtitle">Enjoy yourself and be comfortable </p>
+  </div>
+  <form action="POST" id="form_user">
+    <div class="form-item-wrapper flexed-item">
+      <label for="name" class="label-ref label">Name</label>
+      <input type="text" class="input-text input" placeholder="Albert" required>
+    </div>
+    <div class="form-item-wrapper flexed-item">
+      <label for="last-name" class="label-ref label">Last Name</label>
+      <input type="text" name="last-name" class="input-text input" placeholder="Biceps" required>
+    </div>
+    <div class="form-item-wrapper flexed-item">
+      <label for="email" class="label-ref label">Email</label>
+      <input type="email" name="password" class="input-text input" placeholder="albert.biceps@gmail.com" required>
+    </div>
+    <div class="form-item-wrapper flexed-item">
+      <label for="password" class="label-ref label">Password</label>
+      <input type="password" name="last-name" class="input-text input" placeholder="••••••" required>
+    </div>
     <button class="button-primary white">Create Account</button>
   </form>
-  <p class="form-subtitle">Already have an account : <a href="/login" class="button-link">login</a></p>
+  <p class="form-sub-infos">Already have an account ? <a href="/login" class="button-link-form">Sign In</a></p>
 </div>
