@@ -2,7 +2,7 @@ const express = require("express");
 const router = new express.Router();
 
 router.get("/prod-add", (req, res) => {
-  res.render("products_manage");
+  res.render("products_add");
 });
 
 router.get("/prod-manage", (req, res) => {
