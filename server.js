@@ -59,6 +59,8 @@ const apiSneaker = require("./api/api_sneaker");
 const apiTag = require("./api/tag.js");
 //Requiring the dashboards
 const dashboardSneaker = require("./routes/dashboard_sneaker");
+
+// Using routers
 app.use(basePageRouter);
 app.use(authRouter);
 app.use("/api/sneaker/", apiSneaker.router);
