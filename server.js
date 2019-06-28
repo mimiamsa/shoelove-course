@@ -63,7 +63,7 @@ app.use(basePageRouter);
 app.use(authRouter);
 app.use(adminRouter);
 app.use("/api/sneaker/", apiSneaker.router);
-app.use("/dashboard/sneaker/", dashboardSneaker);
+app.use(dashboardSneaker);
 
 const listener = app.listen(process.env.PORT || 8000, () => {
   console.log(
