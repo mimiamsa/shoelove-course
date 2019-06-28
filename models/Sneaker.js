@@ -18,8 +18,8 @@ const sneakerSchema = new Schema({
     type: Number
   },
   category: {
-    type: Array,
-    enum: [men, women, kids]
+    type: [String],
+    enum: ["men", "women", "kids"]
   },
   id_tags: [
     {
@@ -34,7 +34,7 @@ const sneakerSchema = new Schema({
 
 });
 
-const skeakerModel = mongoose.model("sneaker", sneakerSchema);
+const sneakerModel = mongoose.model("Sneaker", sneakerSchema);
 
-module.exports = skeakerModel;
+module.exports = sneakerModel;
 
