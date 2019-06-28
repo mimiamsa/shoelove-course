@@ -9,6 +9,8 @@ const mongoose = require("mongoose");
 const MongoStore = require("connect-mongo")(session);
 const cookieParser = require("cookie-parser");
 
+
+
 app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 app.use(express.static("public"));
@@ -52,11 +54,16 @@ app.use(checkloginStatus);
 
 const basePageRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
-const productRouter = require("./routes/dashboard_product");
-
+//Requiring the api 
+const apiSneaker = require("./api/api_sneaker");
+const apiTag = require("./api/tag.js");
+//Requiring the dashboards
+const dashboardSneaker = require("./routes/dashboard_sneaker");
 app.use(basePageRouter);
 app.use(authRouter);
-app.use(productRouter);
+app.use("/api/sneaker/", apiSneaker.router);
+app.use("/api/tag/", apiTag.router);
+app.use("/dashboard/sneaker/", dashboardSneaker);
 
 const listener = app.listen(process.env.PORT || 8000, () => {
   console.log(
