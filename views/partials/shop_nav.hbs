@@ -25,12 +25,14 @@
           <li class="nav-item animated-link">
             <a href="/kids">Kids</a>
           </li>
+          {{#if isLoggedIn}}
           <li class="nav-item animated-link nav-item-admin">
             <a href="/prod-add">Add product</a>
           </li>
            <li class="nav-item animated-link nav-item-admin">
             <a href="/prod-manage">Manage products</a>
           </li>
+          {{/if}}
         </ul>
       </div>
       <div class="flexed-item nav-end">
