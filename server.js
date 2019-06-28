@@ -45,18 +45,18 @@ function checkloginStatus(req, res, next) {
   // access this value @ {{user}} in .hbs
   res.locals.isLoggedIn = Boolean(req.session.currentUser);
   // access this value @ {{isLoggedIn}} in .hbs
-  next();
+  next(); // continue to the requested route
 }
 
 app.use(checkloginStatus);
 
 const basePageRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
-const adminRouter = require("./routes/admin");
+const productRouter = require("./routes/dashboard_product");
 
 app.use(basePageRouter);
 app.use(authRouter);
-app.use(adminRouter);
+app.use(productRouter);
 
 const listener = app.listen(process.env.PORT || 8000, () => {
   console.log(
