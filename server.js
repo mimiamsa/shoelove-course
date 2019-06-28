@@ -47,21 +47,22 @@ function checkloginStatus(req, res, next) {
   // access this value @ {{user}} in .hbs
   res.locals.isLoggedIn = Boolean(req.session.currentUser);
   // access this value @ {{isLoggedIn}} in .hbs
-  next();
+  next(); // continue to the requested route
 }
 
 app.use(checkloginStatus);
 
 const basePageRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
-const adminRouter = require("./routes/admin");
 //Requiring the api 
 const apiSneaker = require("./api/api_sneaker");
-//Requiring the dashbords
+const apiTag = require("./api/tag.js");
+//Requiring the dashboards
 const dashboardSneaker = require("./routes/dashboard_sneaker");
+
+// Using routers
 app.use(basePageRouter);
 app.use(authRouter);
-app.use(adminRouter);
 app.use("/api/sneaker/", apiSneaker.router);
 app.use(dashboardSneaker);
 
