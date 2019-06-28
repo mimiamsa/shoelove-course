@@ -41,8 +41,10 @@ app.locals.site_url = process.env.SITE_URL;
 // WARNING: this function must be declared AFTER the session setup
 // WARNING: this function must be declared BEFORE app.use(router(s))
 function checkloginStatus(req, res, next) {
-  res.locals.user = req.currentUser; // @ {{user}} in .hbs
-  res.locals.isLoggedIn = Boolean(req.currentUser); // @ {{isLoggedIn}} in .hbs
+  res.locals.user = req.session.currentUser ? req.session.currentUser : null; 
+  // access this value @ {{user}} in .hbs
+  res.locals.isLoggedIn = Boolean(req.session.currentUser);
+  // access this value @ {{isLoggedIn}} in .hbs
   next();
 }
 
