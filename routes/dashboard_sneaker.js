@@ -8,8 +8,19 @@ router.get("/prod-add", (req, res) => {
 });
 
 router.post("/prod-add", (req, res) => {
-  return console.log(req.body)
-  // res.render("products_add");
+  // return console.log(req.body)
+  const { name, ref, size, description, price, tags } = req.body
+  sneakerApi.create({ name, ref, size, description, price, tags })
+  .then(dbRes => {
+    console.log(dbRes)
+    req.session.flashMessage = {
+      status: "success",
+      txt: "Yes!! A new sneaker was created"
+    };
+  })
+  .catch(dbErr => {
+    console.log(dbErr)
+  })
 });
 
 router.get("/prod-manage", (req, res) => {
