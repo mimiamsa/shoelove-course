@@ -1,0 +1,21 @@
+<section class="sign form-container">
+  <header class="form-header">
+    <h1 class="form-title">Welcome Back !</h1>
+    <p class="form-subtitle">Enjoy yourself and be comfortable </p>
+  </header>
+  {{#if msg}}
+  <p class="message {{msg.status}}">{{msg.text}}</p>
+  {{/if}}
+  <form method="post" action="/signin" id="form_user">
+    <div class="form-item-wrapper flexed-item">
+      <label for="email" class="label-ref label">Email</label>
+      <input type="email" name="password" class="input-text input" placeholder="albert.biceps@gmail.com" required>
+    </div>
+    <div class="form-item-wrapper flexed-item">
+      <label for="password" class="label-ref label">Password</label>
+      <input type="password" name="last-name" class="input-text input" placeholder="••••••" required>
+    </div>
+    <button class="button-primary white">Create Account</button>
+  </form>
+  <p class="form-sub-infos">Don't have an account yet ? <a href="/signup" class="button-link-form">Sign Up</a></p>
+</section>
