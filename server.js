@@ -38,11 +38,11 @@ app.locals.site_url = process.env.SITE_URL;
 // CUSTOM MIDDLEWARE
 // check if user is logged in... 
 // usecases : conditional display in hbs templates
-// this function must be declared before the session setup
-// this function must be declared before app.use(router(s))
+// WARNING: this function must be declared AFTER the session setup
+// WARNING: this function must be declared BEFORE app.use(router(s))
 function checkloginStatus(req, res, next) {
-  // console.log(req);
-  // res.locals.user = req.user; // get {{user}} in .hbs
+  res.locals.user = req.currentUser; // @ {{user}} in .hbs
+  res.locals.isLoggedIn = Boolean(req.currentUser); // @ {{isLoggedIn}} in .hbs
   next();
 }
 
