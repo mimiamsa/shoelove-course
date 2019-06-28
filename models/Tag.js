@@ -3,8 +3,7 @@ const Schema = mongoose.Schema;
 const tagSchema = new Schema({
   name: {
     type: String,
-    enum : ["still life", "human","warm", "cold", "nature"], 
-    required: true,
+    required: true
   }
 });
 
