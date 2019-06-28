@@ -51,6 +51,19 @@ Tags {label}
 Each team will have 5 minutes to showcase their work, friday at 4PM.
 
 ---
+---
+
+## .env infos
+
+PORT=
+SITE_URL=
+MONGO_URI=
+CLOUDINARY_NAME=
+CLOUDINARY_KEY=
+CLOUDINARY_SECRET=
+SESSION_SECRET=
+
+---
 
 ## Bonuses
 
