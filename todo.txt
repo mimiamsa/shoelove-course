@@ -1,0 +1,7 @@
+- signin
+- middle ware isLoggedIn
+- create sneaker
+- read
+- tags add ajax
+- delete ajax dashboard sneaker
+- update ajax dashboard sneaker
