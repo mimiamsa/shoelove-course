@@ -24,12 +24,12 @@ const sneakerSchema = new Schema({
   id_tags: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Palette"
+      ref: "Tag"
     }
   ],
   image: {
     type: String,
-    default: "./../public/medias/img/shoe.png"
+    default: "/medias/img/shoe.png"
   }
 
 });
