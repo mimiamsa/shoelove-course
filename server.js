@@ -55,7 +55,7 @@ app.use(checkloginStatus);
 const basePageRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
 //Requiring the api 
-const apiSneaker = require("./api/api_sneaker");
+const apiSneaker = require("./api/sneaker");
 const apiTag = require("./api/tag.js");
 //Requiring the dashboards
 const dashboardSneaker = require("./routes/dashboard_sneaker");
@@ -63,8 +63,9 @@ const dashboardSneaker = require("./routes/dashboard_sneaker");
 // Using routers
 app.use(basePageRouter);
 app.use(authRouter);
-app.use("/api/sneaker/", apiSneaker.router);
 app.use(dashboardSneaker);
+app.use("/api/sneaker/", apiSneaker.router);
+app.use("/api/tag/", apiTag.router);
 
 const listener = app.listen(process.env.PORT || 8000, () => {
   console.log(
