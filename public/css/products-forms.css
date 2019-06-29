@@ -1,8 +1,8 @@
-.add-product-form{
+.add-product-form, .edit-product-form{
   width: 30%;
   margin-right: 2rem;
 }
-.add-category-form{
+.add-tag-form{
   width: 30%;
 }
 
