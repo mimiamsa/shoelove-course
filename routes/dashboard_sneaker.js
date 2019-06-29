@@ -48,7 +48,6 @@ router.post("/prod-add", uploader.single("image"), (req, res) => {
 router.get("/prod-manage", (req, res) => {
   sneakerApi.getAll("collection")
   .then(apiRes => {
-    console.log(apiRes)
     res.render("products_manage", {
       sneakers: apiRes,
       scripts: ["ajax_dashboard_delete.js"]
@@ -59,7 +58,6 @@ router.get("/prod-manage", (req, res) => {
 router.get("/product-edit/:id", (req, res) => {
   Promise.all([sneakerApi.getOne(req.params.id), tagApi.getAll()])
   .then(apiRes => {
-    console.log(apiRes)
     res.render("product_edit", {sneaker: apiRes[0], tags: apiRes[1]})
   })
   .catch(apiErr => next(apiErr))
