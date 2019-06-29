@@ -1,10 +1,9 @@
 <div class="one-product-container">
   <div class="sneak-info">
     <div class="sneak-info-header">
-      <h1 class="sneak-name">Nike Shark’s</h1>
-      <p class="sneak-description">A super Sneaker that make your run faster, win time An win money!</p>
-      <p class="sneak-ref">Ref. N345TG5</p>
-      {{!-- <p class="sneak-description">A super Sneaker that make your run faster, win time and money</p> --}}
+      <h1 class="sneak-name">{{sneaker.name}}</h1>
+      <p class="sneak-description">{{sneaker.description}}</p>
+      <p class="sneak-ref">Ref. {{sneaker.ref}}</p>
     </div>
   </div>
   <div class="flexed-item">
@@ -15,12 +14,11 @@
       <option value="">38</option>
       <option value="">39</option>
     </select>  
-    <a href="" class="button-primary a-link">Add to cart <i class="fas fa-shopping-cart shop-cart-icon-page"></i></a>
-
+    <a href="" class="button-primary a-link">Add to cart <i class="fas fa-shopping-cart shop-cart-icon-page"></i></a> 
   </div>
 
   <div class="sneak-img-container">
-    <img src="./medias/img/shoe.png" alt="img-product" class="sneak-img">
+    <img src="{{sneaker.image}}" alt="img-product" class="sneak-img">
   </div>
 
 </div>
