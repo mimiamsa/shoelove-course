@@ -1,5 +1,6 @@
 require("dotenv").config();
 require("./config/db_connection"); // database initial setup
+require("./utils/helpers-hbs.js");
 
 const express = require("express");
 const hbs = require("hbs");
