@@ -3,38 +3,34 @@ const Schema = mongoose.Schema;
 const sneakerSchema = new Schema({
   name: {
     type: String,
-    required: true,
+    required: true
   },
   ref: {
-    type: String,
+    type: String
   },
   description: {
-    type: String,
+    type: String
   },
   sizes: {
-    type: Array
+    type: Number
   },
   price: {
     type: Number
   },
   category: {
-    type: [String],
+    type: String,
     enum: ["men", "women", "kids"]
   },
-  id_tags: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Tag"
-    }
-  ],
+  id_tags: {
+    type: [mongoose.Schema.Types.ObjectId],
+    ref: "Tag"
+  },
   image: {
     type: String,
     default: "/medias/img/shoe.png"
   }
-
 });
 
 const sneakerModel = mongoose.model("Sneaker", sneakerSchema);
 
 module.exports = sneakerModel;
-
