@@ -50,7 +50,20 @@ function checkloginStatus(req, res, next) {
   next(); // continue to the requested route
 }
 
+// function eraseMessage() {
+//   var count = 0;
+//   return function(req, res, next) {
+//     if  (req.session.msg && count) {
+//       count = 0;
+//       req.session.msg = null;
+//     }
+//     count++;
+//     next();
+//   };
+// }
+
 app.use(checkloginStatus);
+// app.use(eraseMessage());
 
 const basePageRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
