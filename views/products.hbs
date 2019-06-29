@@ -3,10 +3,12 @@
   {{!-- CATEGORY --}}
   <aside class="category-wrapper">
     <h4 class="category-title">All Tags</h4>
-    <ul class="category-list">
-      <li class="category-list-item"> <a href="">Tag 1</a> </li>
-      <li class="category-list-item"> <a href="">Tag 2</a></li>
-      <li class="category-list-item"> <a href="">Tag 3</a></li>
+    <ul class="tag-list">
+      {{#each tags}}
+      <li class="category-list-item">
+        <a data-tag-id="{{this._id}}" class="tag filter">{{this.name}}</a>
+      </li>
+      {{/each}}
     </ul>
   </aside>
 
