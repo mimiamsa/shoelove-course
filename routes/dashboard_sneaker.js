@@ -20,14 +20,15 @@ router.get("/prod-add", (req, res) => {
 
 router.post("/prod-add", uploader.single("image"), (req, res) => {
   // return console.log(req.body)
-  const { name, ref, size, description, category, price, tags } = req.body;
+  const { name, ref, size, description, category, price } = req.body;
+  const newProduct = { name, ref, size, category, description, price };
 
-  const newProduct = { name, ref, size, category, description, price, tags };
+  if (req.body.id_tags) newProduct.id_tags = [req.body.id_tags];
 
   if (req.file) {
     newProduct.image = req.file.secure_url;
   }
-
+  // return console.log(newProduct)
   sneakerApi
     .create(newProduct)
     .then(dbRes => {
