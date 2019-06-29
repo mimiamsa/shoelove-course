@@ -25,7 +25,7 @@ const updateOne = (id, catName) => tagModel.findOneAndUpdate(
 );
 
 // insert one category in database
-router.post("/create", (req, res) => {
+router.post("/", (req, res) => {
   create(req.body)
     .then(dbRes => res.status(200).json(dbRes))
     .catch(dbErr => res.send(dbErr));
