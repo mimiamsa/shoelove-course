@@ -2,14 +2,25 @@ const express = require("express");
 const sneakerModel = require("../models/Sneaker");
 const router = new express.Router();
 
-const create = sneakerData => sneakerModel.create(sneakerData);
+const create = data => sneakerModel.create(data);
 
 const getAll = cat => {
-  if (cat === "collection") return sneakerModel.find().populate("id_tag");
-  else return sneakerModel.find({ category: cat }).populate("id_tag");
+  if (cat === "collection") return sneakerModel.find().populate("id_tags");
+  else return sneakerModel.find({ category: cat }).populate("id_tags");
 };
 
-const getOne = id => sneakerModel.findById(id).populate("id_tag");
+const getByTagIds = (cat, ids) => {
+  var query;
+  
+  if (cat && ids.length) query = {category: {$eq: cat}, id_tags: { $in: ids}};
+  else if (cat && !ids.length) query = {category: {$eq: cat}};
+  else if (!cat && ids.length) query = { id_tags: { $in: ids}};
+  else query = {};
+
+  return sneakerModel.find(query).populate("id_tags");
+};
+
+const getOne = id => sneakerModel.findById(id).populate("id_tags");
 
 const deleteOne = id => sneakerModel.findOneAndDelete({ _id: id });
 
@@ -31,8 +42,12 @@ router.get("/", (req, res) => {
 });
 
 // fetch all sneakers from database by tag id
-router.get("/tag/:tagid", (req, res) => {
-  getAll({ id_tags: { $all: [req.params.tagid] } })
+router.get("/by-tags-ids", (req, res) => {
+  const ids = [];
+  var cat = req.query.category !== "collection" ? req.query.category : null;
+  for (let prop in req.query) if (prop !== "category") ids.push(req.query[prop]);
+
+  getByTagIds(cat, ids)
     .then(dbRes => res.status(200).json(dbRes))
     .catch(dbErr => res.send(dbErr));
 });
