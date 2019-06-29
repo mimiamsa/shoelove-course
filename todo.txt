@@ -1,7 +1,7 @@
 - signin (Ok)
 - middle ware isLoggedIn (Ok)
-- create sneaker (mimi)
-- read (gui)
-- tags add ajax
-- delete ajax dashboard sneaker
+- tags add ajax (ok)
+- create sneaker (ok)
+- read (ok)
+- delete ajax dashboard sneaker (ok)
 - update ajax dashboard sneaker
