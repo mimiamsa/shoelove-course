@@ -25,7 +25,7 @@ const getOne = id => sneakerModel.findById(id).populate("id_tags");
 const deleteOne = id => sneakerModel.findOneAndDelete({ _id: id });
 
 const updateOne = (id, data) =>
-  sneakerModel.findOneAndUpdate({ _id: id }, { ...data });
+  sneakerModel.findOneAndUpdate({ _id: id }, { ...data }, {useFindAndModify: false});
 
 // insert one sneaker in database
 router.post("/", (req, res) => {

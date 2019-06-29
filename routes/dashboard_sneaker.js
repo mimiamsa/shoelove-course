@@ -72,9 +72,9 @@ router.post("/prod-edit/:id", uploader.single("image"), (req, res) => {
   if (req.file) updatedProduct.image = req.file.secure_url;
 
   sneakerApi
-    .findByIdAndUpdate({_id: req.params.id}, updatedProduct)
+    .updateOne(req.params.id, updatedProduct)
     .then(dbRes => {
-
+      console.log(dbRes);
       req.session.msg = {
         status: "success",
         txt: "Yes!! Sneaker successfully updated"

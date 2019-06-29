@@ -1,29 +1,29 @@
 <div class="big-container product-manage-wrapper flexed-item">
-  <form action="/prod-edit/{{this._id}}" class="edit-product-form">
+  <form method="post" action="/prod-edit/{{sneaker._id}}" class="edit-product-form">
     <h3 class="form-title"> Edit Sneaker</h3>
     <div class="form-item-wrapper flexed-item">
       <label for="sneacker-name" class="label-name label">Model name</label>
-      <input id="sneacker-name" type="text" class="input-text input" placeholder="Nike Air Max 90" value="{{sneaker.name}}">
+      <input name="name" id="sneacker-name" type="text" class="input-text input" placeholder="Nike Air Max 90" value="{{sneaker.name}}">
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="sneacker-ref" class="label-ref label">Réf.</label>
-      <input id="sneacker-ref" type="text" class="input-text input" placeholder="ex: NV23498" value="{{sneaker.ref}}">
+      <input name="ref" id="sneacker-ref" type="text" class="input-text input" placeholder="ex: NV23498" value="{{sneaker.ref}}">
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="sneacker-size" class="label-ref label">Size</label>
-      <input id="sneacker-size" type="number" class="input-text input" placeholder="ex: 37" value="{{sneaker.size}}">
+      <input name="size" id="sneacker-size" type="number" class="input-text input" placeholder="ex: 37" value="{{sneaker.size}}">
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="sneacker-descr" class="label-descr label">Description</label>
-      <input id="sneacker-descr" type="text" class="input-text input" placeholder="The better sneakers to run" value="{{sneaker.description}}">
+      <input name="description" id="sneacker-descr" type="text" class="input-text input" placeholder="The better sneakers to run" value="{{sneaker.description}}">
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="sneacker-price" class="label-price label">Price</label>
-      <input id="sneacker-price" type="number" class="sneacker-price input" min="1" value="{{sneaker.price}}">
+      <input name="sizes" id="sneacker-price" type="number" class="sneacker-price input" min="1" value="{{sneaker.price}}">
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="sneacker-main-cat" class="label-main-cat label">Main category</label>
-      <select name="main-category" id="main_category" class="select" required>
+      <select name="category" id="main_category" class="select" required>
         <option value="-1" disabled selected>Choose main Category...</option>
         <option value="men">Men</option>
         <option value="women">Women</option>
@@ -34,6 +34,6 @@
       <label class="label">Tags</label>
       {{> form_tags_select}}
     </div>
-    <button class="button-primary add-sneacker-btn">Add to collection</button>
+    <button class="button-primary add-sneacker-btn">Edit this sneaker</button>
   </form>
 </div>
