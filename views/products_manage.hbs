@@ -1,5 +1,5 @@
 <div class="big-container manage-products-wrapper">
-  <h3 class="manage-products-title">Manage your Sneakers catalog ({{isLoggedIn}})</h3>
+  <h3 class="manage-products-title">Manage your Sneakers catalog</h3>
   <table class="product-manage-table">
     <thead>
       <tr class="table-row">
@@ -13,38 +13,16 @@
     </thead>
 
     <tbody>
+      {{#each sneakers}}
       <tr class="table-row">
-        <td class="table-division">
-          <div><img src="/medias/img/shoe.png" alt="img" class="table-image" /></div>
-        </td>
-        <td class="table-division">
-          <div>Nike Revolution</div>
-        </td>
-        <td class="table-division">
-          <div>$34</div>
-        </td>
-        <td class="table-division">
-          <div>N2345H</div>
-        </td>
-        <td class="table-division"><a href="/product_edit" class="fa fa-edit table-icon"></a></td>
-        <td class="table-division"><a href="" class="fa fa-trash table-icon" aria-hidden="true"></a></td>
+        {{> dashboard_sneaker_row}}
       </tr>
-      <tr class="table-row">
-        <td class="table-division">
-          <div><img src="/medias/img/shoe.png" alt="img" class="table-image" /></div>
-        </td>
-        <td class="table-division">
-          <div>Nike Revolution</div>
-        </td>
-        <td class="table-division">
-          <div>$34</div>
-        </td>
-        <td class="table-division">
-          <div>N2345H</div>
-        </td>
-        <td class="table-division"><a href="/product-edit" class="fa fa-edit table-icon"></a></t>
-        <td class="table-division"><a href="" class="fa fa-trash table-icon" aria-hidden="true"></a></td>
+      {{/each}}
+      {{#unless sneakers}}
+      <tr>
+        <td colspan="6">sorry no sneakers yet</td>
       </tr>
+      {{/unless}}
     </tbody>
   </table>
 </div>
