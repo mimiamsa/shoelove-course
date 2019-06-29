@@ -44,26 +44,28 @@ app.locals.site_url = process.env.SITE_URL;
 // WARNING: this function must be declared BEFORE app.use(router(s))
 function checkloginStatus(req, res, next) {
   res.locals.user = req.session.currentUser ? req.session.currentUser : null; 
-  // access this value @ {{user}} in .hbs
+  // access this value @ {{user}} or {{user.prop}} in .hbs
   res.locals.isLoggedIn = Boolean(req.session.currentUser);
   // access this value @ {{isLoggedIn}} in .hbs
   next(); // continue to the requested route
 }
 
-// function eraseMessage() {
-//   var count = 0;
-//   return function(req, res, next) {
-//     if  (req.session.msg && count) {
-//       count = 0;
-//       req.session.msg = null;
-//     }
-//     count++;
-//     next();
-//   };
-// }
+function eraseSessionMessage() {
+  var count = 0; // initialize counter in parent scope and use it in inner function
+  return function(req, res, next) {
+    if (req.session.msg) { // only increment if session contains msg
+      if (count) { // if count greater than 0
+        count = 0; // reset counter
+        req.session.msg = null; // reset message
+      }
+      ++count; // increment counter
+    }
+    next(); // continue to the requested route
+  };
+}
 
 app.use(checkloginStatus);
-// app.use(eraseMessage());
+app.use(eraseSessionMessage());
 
 const basePageRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
