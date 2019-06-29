@@ -8,10 +8,12 @@ router.get(["/", "/home"], (req, res) => {
 });
 
 router.get("/sneakers/:cat", (req, res) => {
+  console.log(req.params.cat)
   Promise.all([sneakerApi.getAll(req.params.cat), tagApi.getAll()])
   .then(apiRes => {
     // console.log(apiRes);
     res.render("products", {
+      category: req.params.cat,
       scripts: ["ajax_tag_filter.js"],
       sneakers: apiRes[0],
       tags: apiRes[1],
