@@ -1,20 +1,22 @@
-aside.category-wrapper {
+aside.tag-wrapper {
   width: 17%;
   padding: 2rem 1.5%;
 }
 
-
-h4.category-title {
+.tag-title {
   font-size: 1.2rem;
   border-bottom: 1px solid rgb(212, 212, 212);
   padding-bottom: .8rem;
   margin-bottom: .8rem;
 }
 
-.category-tag-item {
+.tag-list-item {
   color: rgb(151, 151, 151);
   cursor: pointer;
   line-height: 1.5;
+  display: flex;
+  justify-content: space-between;
+  max-width: 95%;
 }
 
 .products-wrapper {
