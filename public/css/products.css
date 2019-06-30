@@ -13,10 +13,13 @@ aside.tag-wrapper {
 .tag-list-item {
   color: rgb(151, 151, 151);
   cursor: pointer;
-  line-height: 1.5;
+  line-height: 1.7;
   display: flex;
-  justify-content: space-between;
-  max-width: 95%;
+  align-items: center;
+}
+
+.checkbox{
+  margin-right: .4rem; 
 }
 
 .products-wrapper {
@@ -88,3 +91,4 @@ h4.products-title {
   font-size: .9rem;
   margin-bottom: .5rem;
 }
+
