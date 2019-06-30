@@ -33,7 +33,7 @@ router.post("/signin", (req, res) => {
         });
     })
     .catch(dbErr => {
-      next(dbErr);
+      next(dbErr);//TODO get in depth here
     });
 });
 
