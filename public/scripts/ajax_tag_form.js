@@ -10,23 +10,24 @@ function addTagOption(id) {
     input.value = "";
 }
 
-function addMessage(status) {
+function addMessage(status, clbk) {
     tagMessage.innerHTML = "Tag succesfully created";
     tagMessage.className += "status";
     setTimeout(() => {
         tagMessage.className = "message"
         tagMessage.innerHTML = "";
-    }, 2000);
+    }, 4000);
+    clbk()
 }
 
-btn.onclick = function(evt) {
+btn.onclick = function (evt) {
     if (input.value && input.value.length >= 3) {
         apiTagHandler.create(input.value)
-        .then((apiRes) => {
-            addTagOption(apiRes.data._id);
-            addMessage("success");
-        })
-        .catch((apiErr) => console.warn(apiErr))
+            .then((apiRes) => {
+                addTagOption(apiRes.data._id);
+                addMessage("success");
+            })
+            .catch((apiErr) => console.warn(apiErr))
     } else {
         alert("wrong tag format")
     }
